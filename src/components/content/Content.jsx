@@ -5,36 +5,25 @@ import ButtonToViews from "../ui/buttons/ButtonToViews";
 import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 
 const Content = () => {
-  const { checkCityInfo, theme, loading } = useContext(MusicWeatherContext);
+  const { checkCityInfo, loading } = useContext(MusicWeatherContext);
   return (
-    <section
-      className={`${
-        theme === "light"
-          ? "bg-gradient-to-b from-bright-sun-300 to-bright-sun-500"
-          : "bg-black"
-      } h-screen text-center `}
-    >
+    <section className=" bg-black h-screen text-center">
       <div className="text-dark text-center flex flex-col items-center justify-center h-screen">
-        <img
-          src={`${
-            theme === "light" ? "/img/logoLight.png" : "/img/logoDark.png"
-          } `}
-          className=""
-        />
+        <img src="/img/logoDark.png" />
 
         <SectionCityCountry />
         {loading ? (
           <div className="flex py-4 items-center justify-center space-x-2">
             <div
-              className="w-2 h-2 bg-bright-sun-950 rounded-full animate-bounce"
+              className="w-2 h-2 bg-blue rounded-full animate-bounce"
               style={{ animationDelay: "0s" }}
             ></div>
             <div
-              className="w-2 h-2 bg-bright-sun-950 rounded-full animate-bounce"
+              className="w-2 h-2 bg-blue rounded-full animate-bounce"
               style={{ animationDelay: "0.2s" }}
             ></div>
             <div
-              className="w-2 h-2 bg-bright-sun-950 rounded-full animate-bounce"
+              className="w-2 h-2 bg-blue rounded-full animate-bounce"
               style={{ animationDelay: "0.4s" }}
             ></div>
           </div>

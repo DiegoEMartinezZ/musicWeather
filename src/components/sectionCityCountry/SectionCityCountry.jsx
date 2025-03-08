@@ -4,7 +4,7 @@ import CitySection from "../city/CitySection";
 
 const SectionCityCountry = () => {
   return (
-    <ul className="my-3 text-center text-bright-sun-950 font-base">
+    <ul className="my-3 text-center text-black font-base">
       <CountrySection />
       <CitySection />
     </ul>

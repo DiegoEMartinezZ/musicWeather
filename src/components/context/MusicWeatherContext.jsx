@@ -22,6 +22,7 @@ const MusicWeatherProvider = ({ children }) => {
     setBackgrounds({ sm: "", md: "", lg: "" });
     setIsDay(null);
     setIsHumidity(null);
+    setLoading(true);
   };
 
   const goToInfo = () => {

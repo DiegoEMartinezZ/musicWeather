@@ -51,6 +51,7 @@ export default {
       black: "#000",
       saved: "#34c759",
       remove: "#ff3b30",
+      blue: "#99ffff",
     },
   },
   plugins: [],

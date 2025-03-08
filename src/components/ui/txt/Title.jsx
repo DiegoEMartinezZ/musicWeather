@@ -1,16 +1,10 @@
-import React, { useContext } from "react";
-import { MusicWeatherContext } from "../../context/MusicWeatherContext";
+import React from "react";
 
 const Title = ({ title }) => {
-  const { theme } = useContext(MusicWeatherContext);
   return (
     <>
-      <div
-        className={`${
-          theme == "light" ? "text-bright-sun-950" : "text-bright-sun-500"
-        } flex items-center justify-center `}
-      >
-        <h1 className="text-3xl font-bold">{title} </h1>
+      <div className="flex items-center justify-center text-blue">
+        <h1 className="text-2xl font-bold my-4">{title} </h1>
       </div>
     </>
   );

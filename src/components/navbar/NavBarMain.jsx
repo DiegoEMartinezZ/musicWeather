@@ -22,26 +22,26 @@ const NavBarMain = () => {
   const conditionSettings = settingsIcon == true ? faStar : faXmark;
 
   return (
-    <nav className="flex justify-between items-center p-5 text-bright-sun-950">
+    <nav className="flex justify-between items-center p-5 text-blue bg-black">
       <FontAwesomeIcon
         icon={faArrowLeft}
         onClick={goToHome}
-        className="text-bright-sun-950
+        className="text-blue
          mx-4 cursor-pointer"
       />
       <div>
         <FontAwesomeIcon
           icon={conditionSettings}
           onClick={visibleSettings}
-          className="text-bright-sun-950
+          className="text-blue
            mx-4 cursor-pointer "
         />
       </div>
 
       <ul
-        className={`${showSettings == true ? "block" : "hidden"} ${
-          theme === "light" ? "bg-bright-sun-950" : "bg-bright-sun-400"
-        } p-3 rounded-lg text-white text-right absolute right-4 top-14`}
+        className={`${
+          showSettings == true ? "block" : "hidden"
+        } bg-black p-3 rounded-lg text-white text-right absolute right-4 top-14`}
       >
         <BtnSettings handler={goToFavoriteCities} txt={"Favorite Cities"} />
       </ul>

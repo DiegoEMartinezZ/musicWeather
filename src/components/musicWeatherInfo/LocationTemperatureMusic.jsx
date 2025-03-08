@@ -22,7 +22,6 @@ const LocationTemperatureMusic = () => {
   } = useContext(MusicWeatherContext);
 
   const getBackgroundClass = (isDay, isHumidity) => {
-    console.log(isDay, isHumidity);
     // Determine the background based on humidity and time of day
     if (isHumidity >= 60) {
       return isDay ? "bg-day-cold" : "bg-night-cold";
@@ -37,7 +36,6 @@ const LocationTemperatureMusic = () => {
   md:${getBackgroundClass(isDay, isHumidity)}-md 
   lg:${getBackgroundClass(isDay, isHumidity)}-lg`;
 
-  console.log(getBackgroundClass(isDay, isHumidity));
   return weatherData < 0 ? (
     <Page401 />
   ) : (
@@ -55,7 +53,7 @@ const LocationTemperatureMusic = () => {
           >
             <ButtonToViews icon={faStar} handler={favCity} />
           </div>
-          <div className=" text-bright-sun-950 bg-bright-sun-200/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-bright-sun-50">
+          <div className=" text-blue bg-black/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-blue">
             <div className="flex flex-col">
               <h1>{weatherData.condition.text}</h1>
               <h1 className="font-medium  text-7xl">
@@ -77,7 +75,7 @@ const LocationTemperatureMusic = () => {
 
           {showMessage && (
             <div
-              className={`bg-bright-sun-950 text-white fixed top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded shadow-md transition-opacity duration-300`}
+              className={`bg-blue text-black fixed top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded shadow-md transition-opacity duration-300`}
             >
               {message}
             </div>

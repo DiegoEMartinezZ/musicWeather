@@ -77,15 +77,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
     <>
       <ol
         key={idx}
-        className={`my-4 p-1 w-3/4 rounded-lg flex justify-around items-center m-auto lg:w-1/4  ${
-          showFavCityOptions === true
-            ? "bg-bright-sun-200"
-            : "bg-bright-sun-950"
-        } ${
-          showFavCityOptions === true
-            ? "text-bright-sun-950"
-            : "text-bright-sun-200"
-        }`}
+        className="bg-blue text-black my-4 px-5 p-1 w-3/4 rounded-lg flex justify-around m-auto items-center lg:w-1/4"
       >
         <li className="flex justify-around">
           <div className="flex items-center">
@@ -95,11 +87,11 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
               icon={faCaretDown}
               className={`${
                 showFavCityOptions === true ? "-rotate-90" : "rotate-0"
-              } mx-4 `}
+              } ml-2 `}
             />
           </div>
           {showFavCityOptions && (
-            <section className="flex flex-row flex-nowrap">
+            <section className="flex flex-row flex-nowrap ml-3">
               <BtnFavoriteCities handler={fetchACity} icon={faEye} />
               <BtnFavoriteCities
                 handler={() => deleteFavCity(favoriteCity)}
