@@ -5,8 +5,7 @@ import ButtonToViews from "../ui/buttons/ButtonToViews";
 import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 
 const Content = () => {
-  const { checkCityInfo, weatherData, theme, loading } =
-    useContext(MusicWeatherContext);
+  const { checkCityInfo, theme, loading } = useContext(MusicWeatherContext);
   return (
     <section
       className={`${
@@ -20,7 +19,7 @@ const Content = () => {
           src={`${
             theme === "light" ? "/img/logoLight.png" : "/img/logoDark.png"
           } `}
-          className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-72"
+          className=""
         />
 
         <SectionCityCountry />
