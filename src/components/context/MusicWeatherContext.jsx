@@ -50,7 +50,7 @@ const MusicWeatherProvider = ({ children }) => {
   const [citiesArray, setCitiesArray] = useState([]);
   const [weatherData, setWeatherData] = useState([]);
   const [locationData, setLocationData] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   //
   //
   /* From this point I would applied a JSON file as a TEST file with some countries and
@@ -103,7 +103,7 @@ const MusicWeatherProvider = ({ children }) => {
         });
 
         const { location, current } = response.data;
-
+        setLoading(false);
         setLocationData(location);
         setWeatherData(current);
         setIsDay(current.is_day);
@@ -264,6 +264,7 @@ const MusicWeatherProvider = ({ children }) => {
   return (
     <MusicWeatherContext.Provider
       value={{
+        loading,
         goToHome,
         goToInfo,
         goToFavoriteCities,

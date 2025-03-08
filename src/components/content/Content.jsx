@@ -5,7 +5,8 @@ import ButtonToViews from "../ui/buttons/ButtonToViews";
 import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 
 const Content = () => {
-  const { checkCityInfo, weatherData, theme } = useContext(MusicWeatherContext);
+  const { checkCityInfo, weatherData, theme, loading } =
+    useContext(MusicWeatherContext);
   return (
     <section
       className={`${
@@ -23,7 +24,22 @@ const Content = () => {
         />
 
         <SectionCityCountry />
-        {weatherData.toString().length > 0 && (
+        {loading ? (
+          <div className="flex py-4 items-center justify-center space-x-2">
+            <div
+              className="w-2 h-2 bg-bright-sun-950 rounded-full animate-bounce"
+              style={{ animationDelay: "0s" }}
+            ></div>
+            <div
+              className="w-2 h-2 bg-bright-sun-950 rounded-full animate-bounce"
+              style={{ animationDelay: "0.2s" }}
+            ></div>
+            <div
+              className="w-2 h-2 bg-bright-sun-950 rounded-full animate-bounce"
+              style={{ animationDelay: "0.4s" }}
+            ></div>
+          </div>
+        ) : (
           <ButtonToViews handler={checkCityInfo} icon={faPlay} />
         )}
       </div>
