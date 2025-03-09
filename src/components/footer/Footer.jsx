@@ -12,7 +12,7 @@ const Footer = () => {
     <>
       <footer
         className="
-          text-blue absolute bottom-0 right-0 left-0 bg-black p-5 text-center py-3 text-xs italic font-light lg:w-1/3 lg:block lg:m-auto"
+          text-bright-sun-400 absolute bottom-0 right-0 left-0 bg-black p-5 text-center py-3 text-xs italic font-light w-screen lg:py-5 lg:px-52 lg:block lg:m-auto"
       >
         <div className="flex justify-around my-2 px-4">
           <SocialMedia

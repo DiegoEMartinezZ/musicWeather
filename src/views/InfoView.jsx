@@ -6,8 +6,10 @@ import InfoContent from "../components/content/InfoContent";
 const InfoView = () => {
   return (
     <>
-      <InfoContent />
-      <Footer />
+      <section className="text-center items-center justify-center h-screen">
+        <InfoContent />
+        <Footer />
+      </section>
     </>
   );
 };

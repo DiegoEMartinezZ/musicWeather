@@ -77,7 +77,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
     <>
       <ol
         key={idx}
-        className="bg-blue text-black my-4 px-5 p-1 w-3/4 rounded-lg flex justify-around m-auto items-center lg:w-1/4"
+        className="bg-bright-sun-400 text-black my-4 px-5 p-1 w-3/4 rounded-lg flex justify-around m-auto items-center lg:w-1/4"
       >
         <li className="flex justify-around">
           <div className="flex items-center">

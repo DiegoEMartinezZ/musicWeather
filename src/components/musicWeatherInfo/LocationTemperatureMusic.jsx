@@ -8,6 +8,8 @@ import LocationInfo from "./location/LocationInfo";
 import ButtonToViews from "../ui/buttons/ButtonToViews";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import NavBarMain from "../navbar/NavBarMain";
+import { faMapPin } from "@fortawesome/free-solid-svg-icons/faMapPin";
+import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 
 const LocationTemperatureMusic = () => {
   //Info of the Weather API depending of each city
@@ -51,9 +53,9 @@ const LocationTemperatureMusic = () => {
               btnFlag === false ? "hidden" : "block"
             } absolute right-0 left-0 lg:m-auto lg:justify-center sm:px-16`}
           >
-            <ButtonToViews icon={faStar} handler={favCity} />
+            <ButtonToViews icon={faPlus} handler={favCity} />
           </div>
-          <div className=" text-blue bg-black/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-blue">
+          <div className=" text-white bg-black/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-blue/50">
             <div className="flex flex-col">
               <h1>{weatherData.condition.text}</h1>
               <h1 className="font-medium  text-7xl">

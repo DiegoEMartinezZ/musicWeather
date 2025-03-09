@@ -5,7 +5,7 @@ const Icons = ({ iconName, handler }) => {
   return (
     <FontAwesomeIcon
       icon={iconName}
-      className=" mx-4 cursor-pointer text-blue "
+      className=" mx-4 cursor-pointer text-bright-sun-400 "
       onClick={handler}
     />
   );

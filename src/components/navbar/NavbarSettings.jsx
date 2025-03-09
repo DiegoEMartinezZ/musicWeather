@@ -6,7 +6,7 @@ import Icons from "../ui/icons/Icons";
 const NavbarSettings = () => {
   const { goToHome } = useContext(MusicWeatherContext);
   return (
-    <nav className="text-blue flex justify-end items-center p-5">
+    <nav className="text-bright-sun-400  flex justify-end items-center p-5">
       <div>
         <Icons iconName={faHome} handler={goToHome} />
       </div>

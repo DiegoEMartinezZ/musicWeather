@@ -9,11 +9,11 @@ const LocationInfo = () => {
 
   return (
     <>
-      <section className="py-3 flex flex-col text-blue bg-black w-fit px-10 m-auto rounded-xl justify-center items-center 2xl:mt-44">
+      <section className=" py-2 flex flex-col text-bright-sun-300 bg-black w-fit px-5 m-auto rounded-lg justify-center items-center 2xl:mt-44">
         <TitleFavoriteCities favCity={locationData.name} />
         <div className="flex items-center">
           <FontAwesomeIcon icon={faLocationDot} className="mr-2 " />
-          <h3> {locationData.country} </h3>
+          <h3 className="font-sm text-sm"> {locationData.country} </h3>
         </div>
       </section>
     </>
