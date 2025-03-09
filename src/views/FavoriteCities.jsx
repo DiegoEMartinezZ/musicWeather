@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer";
 
 const FavoriteCities = () => {
   return (
-    <section className="bg-black h-screen text-center">
+    <section className="bg-black text-center h-screen">
       <NavbarSettings />
       <Title title={"My Favorite Cities"} />
       <FavoriteCity />
