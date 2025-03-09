@@ -6,10 +6,8 @@ import InfoContent from "../components/content/InfoContent";
 const InfoView = () => {
   return (
     <>
-      <section className="text-center items-center justify-center h-screen">
-        <InfoContent />
-        <Footer />
-      </section>
+      <InfoContent />
+      <Footer year={2025} />
     </>
   );
 };

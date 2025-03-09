@@ -77,7 +77,9 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
     <>
       <ol
         key={idx}
-        className="bg-bright-sun-400 text-black my-4 px-5 p-1 w-3/4 rounded-lg flex justify-around m-auto items-center lg:w-1/4"
+        className={`${
+          showFavCityOptions === true ? "bg-blue" : "bg-bright-sun-400"
+        } text-black my-4 px-5 p-1 w-3/4 rounded-lg flex justify-around m-auto items-center lg:w-1/4`}
       >
         <li className="flex justify-around">
           <div className="flex items-center">
@@ -87,7 +89,7 @@ const FavCitySettings = ({ favoriteCity, idx }) => {
               icon={faCaretDown}
               className={`${
                 showFavCityOptions === true ? "-rotate-90" : "rotate-0"
-              } ml-2 `}
+              }  ml-2 `}
             />
           </div>
           {showFavCityOptions && (

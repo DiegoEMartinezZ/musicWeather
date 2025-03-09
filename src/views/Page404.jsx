@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { MusicWeatherContext } from "../components/context/MusicWeatherContext";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 import ButtonToViews from "../components/ui/buttons/ButtonToViews";
 
-const Page401 = () => {
+const Page404 = () => {
   const { goToHome } = useContext(MusicWeatherContext);
   return (
     <div className="text-bright-sun-950 text-center flex flex-col items-center justify-center h-screen">
@@ -15,4 +15,4 @@ const Page401 = () => {
   );
 };
 
-export default Page401;
+export default Page404;

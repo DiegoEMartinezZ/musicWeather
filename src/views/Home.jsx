@@ -6,11 +6,9 @@ import Content from "../components/content/Content";
 const Home = () => {
   return (
     <>
-      <section className="text-center items-center justify-center h-screen">
-        <Navbar />
-        <Content />
-        <Footer />
-      </section>
+      <Navbar />
+      <Content />
+      <Footer />
     </>
   );
 };

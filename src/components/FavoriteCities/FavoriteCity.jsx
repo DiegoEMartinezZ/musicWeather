@@ -8,7 +8,7 @@ const FavoriteCity = () => {
   return (
     <>
       {arrayFavCities.length <= 0 ? (
-        <h1> No saved favorite cities </h1>
+        <h1 className="text-white"> No saved favorite cities :( </h1>
       ) : (
         <ul>
           {arrayFavCities.sort().map((city, idx) => (

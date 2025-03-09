@@ -3,13 +3,11 @@ import { MusicWeatherContext } from "../context/MusicWeatherContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons/faDroplet";
 import { faWind } from "@fortawesome/free-solid-svg-icons/faWind";
-import Page401 from "../../views/Page401";
+import Page404 from "../../views/Page404";
 import LocationInfo from "./location/LocationInfo";
 import ButtonToViews from "../ui/buttons/ButtonToViews";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import NavBarMain from "../navbar/NavBarMain";
-import { faMapPin } from "@fortawesome/free-solid-svg-icons/faMapPin";
-import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const LocationTemperatureMusic = () => {
   //Info of the Weather API depending of each city
@@ -39,24 +37,33 @@ const LocationTemperatureMusic = () => {
   lg:${getBackgroundClass(isDay, isHumidity)}-lg`;
 
   return weatherData < 0 ? (
-    <Page401 />
+    <Page404 />
   ) : (
     <>
       <div
-        className={`absolute inset-0 w-full h-screen bg-cover bg-center ${responsiveClasses}`}
+        className={`inset-0 w-auto h-screen bg-cover bg-center ${responsiveClasses}`}
       >
         <NavBarMain />
-        <div className="mt-12">
+        <div className="mt-20">
+          {!btnFlag && (
+            <h1 className="font-base text-sm  w-fit m-auto p-1 rounded-xl px-3 my-1 bg-black text-blue">
+              <FontAwesomeIcon
+                icon={faStar}
+                className="mr-2 text-bright-sun-400"
+              />
+              Favorite City{" "}
+            </h1>
+          )}
           <LocationInfo />
           <div
             className={`${
               btnFlag === false ? "hidden" : "block"
             } absolute right-0 left-0 lg:m-auto lg:justify-center sm:px-16`}
           >
-            <ButtonToViews icon={faPlus} handler={favCity} />
+            <ButtonToViews icon={faStar} handler={favCity} />
           </div>
-          <div className=" text-white bg-black/50 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-blue/50">
-            <div className="flex flex-col">
+          <div className=" text-black bg-bright-sun-400/60 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-white">
+            <div className="flex-col">
               <h1>{weatherData.condition.text}</h1>
               <h1 className="font-medium  text-7xl">
                 {weatherData.temp_c.toFixed(0)}°c
@@ -77,7 +84,7 @@ const LocationTemperatureMusic = () => {
 
           {showMessage && (
             <div
-              className={`bg-blue text-black fixed top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded shadow-md transition-opacity duration-300`}
+              className={`bg-bright-sun-400 text-sm text-black fixed top-14 left-1/2 transform -translate-x-1/2 my-2 p-1 w-fit rounded shadow-md transition-opacity duration-300`}
             >
               {message}
             </div>

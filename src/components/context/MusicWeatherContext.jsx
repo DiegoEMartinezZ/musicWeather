@@ -298,6 +298,7 @@ const MusicWeatherProvider = ({ children }) => {
         setIsDay,
         isHumidity,
         setIsHumidity,
+        btnFlag,
       }}
     >
       {children}

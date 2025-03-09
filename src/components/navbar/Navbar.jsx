@@ -24,8 +24,9 @@ const Navbar = () => {
         <div>
           <FontAwesomeIcon
             icon={conditionSettings}
-            onClick={visibleSettings}
-            className=" mx-4 cursor-pointer text-bright-sun-400 "
+            onClick={goToFavoriteCities}
+            className="text-bright-sun-400
+           mx-4 cursor-pointer "
           />
         </div>
 
