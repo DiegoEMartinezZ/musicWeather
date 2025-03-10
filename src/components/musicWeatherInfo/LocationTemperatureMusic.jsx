@@ -45,15 +45,6 @@ const LocationTemperatureMusic = () => {
       >
         <NavBarMain />
         <div className="mt-20">
-          {!btnFlag && (
-            <h1 className="font-base text-sm  w-fit m-auto p-1 rounded-xl px-3 my-1 bg-black text-blue">
-              <FontAwesomeIcon
-                icon={faStar}
-                className="mr-2 text-bright-sun-400"
-              />
-              Favorite City{" "}
-            </h1>
-          )}
           <LocationInfo />
           <div
             className={`${
