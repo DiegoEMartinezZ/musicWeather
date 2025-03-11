@@ -5,7 +5,7 @@ const ButtonToViews = ({ icon, handler }) => {
   return (
     <>
       <button
-        className="text-black px-3 p-2 rounded-full m-4 text-sm bg-bright-sun-400"
+        className="text-black px-3 p-2 rounded-full m-2 text-sm bg-blue"
         onClick={handler}
       >
         <FontAwesomeIcon icon={icon} />

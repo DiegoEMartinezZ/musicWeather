@@ -3,11 +3,11 @@ import { MusicWeatherContext } from "../context/MusicWeatherContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons/faDroplet";
 import { faWind } from "@fortawesome/free-solid-svg-icons/faWind";
-import Page404 from "../../views/Page404";
 import LocationInfo from "./location/LocationInfo";
 import ButtonToViews from "../ui/buttons/ButtonToViews";
 import NavBarMain from "../navbar/NavBarMain";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import MusicInfo from "./music/MusicInfo";
 
 const LocationTemperatureMusic = () => {
   //Info of the Weather API depending of each city
@@ -19,6 +19,7 @@ const LocationTemperatureMusic = () => {
     btnFlag,
     isDay,
     isHumidity,
+    goToHome,
   } = useContext(MusicWeatherContext);
 
   const getBackgroundClass = (isDay, isHumidity) => {
@@ -36,15 +37,15 @@ const LocationTemperatureMusic = () => {
   md:${getBackgroundClass(isDay, isHumidity)}-md 
   lg:${getBackgroundClass(isDay, isHumidity)}-lg`;
 
-  return weatherData < 0 ? (
-    <Page404 />
+  return weatherData <= 0 ? (
+    goToHome()
   ) : (
     <>
       <div
         className={`inset-0 w-auto h-screen bg-cover bg-center ${responsiveClasses}`}
       >
         <NavBarMain />
-        <div className="mt-20">
+        <div className="mt-8 2xl:mt-32">
           <LocationInfo />
           <div
             className={`${
@@ -53,7 +54,7 @@ const LocationTemperatureMusic = () => {
           >
             <ButtonToViews icon={faStar} handler={favCity} />
           </div>
-          <div className=" text-black bg-bright-sun-400/60 flex items-center justify-center rounded-full w-64 h-64 mt-6 mb-10 m-auto border-8 border-white">
+          <div className=" text-black bg-bright-sun-400/60 flex items-center justify-center rounded-full w-64 h-64 my-5 m-auto border-8 border-white">
             <div className="flex-col">
               <h1>{weatherData.condition.text}</h1>
               <h1 className="font-medium  text-7xl">
@@ -72,6 +73,7 @@ const LocationTemperatureMusic = () => {
               </section>
             </div>
           </div>
+          <MusicInfo />
 
           {showMessage && (
             <div

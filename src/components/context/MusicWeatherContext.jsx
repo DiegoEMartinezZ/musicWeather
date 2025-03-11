@@ -17,7 +17,6 @@ const MusicWeatherProvider = ({ children }) => {
   const goToHome = () => {
     navigate("/home");
     setCityName("");
-    setWeatherData([]);
     setBtnFlag(true);
     setBackgrounds({ sm: "", md: "", lg: "" });
     setIsDay(null);
@@ -262,9 +261,23 @@ const MusicWeatherProvider = ({ children }) => {
     }
   };
 
+  //
+  /*
+   Handler to stop de current song and change the pause icon for play icon
+   */
+  //
+
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const music = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <MusicWeatherContext.Provider
       value={{
+        music,
+        isPlaying,
         loading,
         goToHome,
         goToInfo,
@@ -298,7 +311,6 @@ const MusicWeatherProvider = ({ children }) => {
         setIsDay,
         isHumidity,
         setIsHumidity,
-        btnFlag,
       }}
     >
       {children}

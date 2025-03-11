@@ -8,7 +8,7 @@ const LocationInfo = () => {
 
   return (
     <>
-      <div className="2xl:mt-44">
+      <div>
         {!btnFlag && (
           <div className="font-base flex justify-center items-center text-sm w-fit m-auto p-1 rounded-xl px-3 my-2 bg-black text-blue">
             <FontAwesomeIcon
