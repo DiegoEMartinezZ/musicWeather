@@ -1,10 +1,6 @@
-import "./App.css";
 import { MusicWeatherProvider } from "./components/context/MusicWeatherContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Landing from "./views/Landing";
-import Home from "./views/Home";
-import InfoView from "./views/InfoView";
-import FavoriteCities from "./views/FavoriteCities";
+import routes from "./Routes";
 
 function App() {
   return (
@@ -12,10 +8,13 @@ function App() {
       <BrowserRouter>
         <MusicWeatherProvider>
           <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/info" element={<InfoView />} />
-            <Route path="/favorite" element={<FavoriteCities />} />
+            {routes.map((oneRoute) => (
+              <Route
+                key={oneRoute.path}
+                path={oneRoute.path}
+                element={oneRoute.element}
+              />
+            ))}
           </Routes>
         </MusicWeatherProvider>
       </BrowserRouter>

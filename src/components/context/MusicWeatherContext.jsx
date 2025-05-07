@@ -98,11 +98,11 @@ const MusicWeatherProvider = ({ children }) => {
       if (!cityName) return;
 
       try {
-        const response = await axios.get(`${BACKEND_URL}/api/weather`, {
+        const res = await axios.get(`${BACKEND_URL}/api/weather`, {
           params: { city: cityName },
         });
 
-        const { location, current } = response.data;
+        const { location, current } = res.data;
         setLoading(false);
         setLocationData(location);
         setWeatherData(current);
