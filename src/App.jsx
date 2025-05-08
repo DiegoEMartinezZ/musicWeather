@@ -1,6 +1,6 @@
 import { MusicWeatherProvider } from "./components/context/MusicWeatherContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import routes from "./Routes";
+import routes from "./routes";
 
 function App() {
   return (
